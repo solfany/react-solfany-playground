@@ -1,0 +1,72 @@
+/* 헤더 */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8vw 5vw;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+    font-size: 0.9rem;
+    margin: 0 auto;
+}
+
+/* 로고 스타일 - 브랜드 느낌 강조 */
+.logo>a {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration-line: none;
+}
+
+/* 네비게이션 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.nav-links li {
+    display: inline;
+}
+
+/* 네비게이션 링크 */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* 버튼 스타일 */
+.buy-button {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+    background-color: #e6b800;
+}

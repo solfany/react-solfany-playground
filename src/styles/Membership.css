@@ -1,0 +1,104 @@
+/* Membership.css */
+
+.membership-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8e6ff65, #ffffff63);
+    color: white;
+    height: 75vh;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .toggle-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .toggle-button:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .discount {
+    color: #ffcc00;
+    font-weight: bold;
+  }
+  
+  .plans-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .plan-card {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+  }
+  
+  .plan-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .popular {
+    border: 2px solid #ffcc00;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .plan-button {
+    background: #2575fc;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .plan-button:hover {
+    background: #1a5dcc;
+  }
+  
+  .footer-note {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
