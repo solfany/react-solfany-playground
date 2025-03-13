@@ -1,7 +1,12 @@
 {
+  "homepage": "https://solfany.github.io/react-solfany-playground/",
   "name": "solfany-playground",
   "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solfany/react-solfany-playground/"
+  },
   "dependencies": {
     "@react-navigation/native": "^7.0.15",
     "@react-navigation/native-stack": "^7.2.1",
@@ -21,14 +26,13 @@
     "redux": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://solfany.github.io/react-solfany-playground/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
