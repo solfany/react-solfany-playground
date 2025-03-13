@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-solfany-playground/static/css/main.19c7b7b8.css",
+    "main.js": "/react-solfany-playground/static/js/main.bffc60f7.js",
+    "index.html": "/react-solfany-playground/index.html",
+    "main.19c7b7b8.css.map": "/react-solfany-playground/static/css/main.19c7b7b8.css.map",
+    "main.bffc60f7.js.map": "/react-solfany-playground/static/js/main.bffc60f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19c7b7b8.css",
+    "static/js/main.bffc60f7.js"
+  ]
+}
