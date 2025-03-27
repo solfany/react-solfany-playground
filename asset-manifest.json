@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/react-solfany-playground/static/css/main.19c7b7b8.css",
-    "main.js": "/react-solfany-playground/static/js/main.47047c20.js",
-    "index.html": "/react-solfany-playground/index.html",
-    "main.19c7b7b8.css.map": "/react-solfany-playground/static/css/main.19c7b7b8.css.map",
-    "main.47047c20.js.map": "/react-solfany-playground/static/js/main.47047c20.js.map"
+    "main.css": "/static/css/main.19c7b7b8.css",
+    "main.js": "/static/js/main.47047c20.js",
+    "index.html": "/index.html",
+    "main.19c7b7b8.css.map": "/static/css/main.19c7b7b8.css.map",
+    "main.47047c20.js.map": "/static/js/main.47047c20.js.map"
   },
   "entrypoints": [
     "static/css/main.19c7b7b8.css",
