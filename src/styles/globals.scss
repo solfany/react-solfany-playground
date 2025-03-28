@@ -1,0 +1,9 @@
+// styles/globals.scss
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+@use "base/reset";
+@use "base/fonts";
+@use "base/base";
+@use "layout/header";
+@use "layout/footer";
+@use "layout/layout";

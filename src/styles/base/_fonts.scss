@@ -1,0 +1,14 @@
+@use '../abstracts/variables' as var;
+
+@font-face {
+  font-family: 'OngleafParkDahyun';
+  src: url('../../../public/fonts/온글잎_박다현체.ttf') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'OngleafParkDahyun', var.$font-main, sans-serif;
+}

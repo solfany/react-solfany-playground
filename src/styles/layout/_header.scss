@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as var;
+@use '../abstracts/mixins' as *;
+
+/* ===============================
+   헤더
+================================ */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.8vw 5vw;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var.$gray-dark;
+  backdrop-filter: blur(10px);
+  height: var.$header-height-md;
+
+  &.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: var.$gray-light;
+  }
+
+  .logo {
+    a {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+
+    li {
+      display: inline;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var.$accent-color;
+      }
+    }
+  }
+
+  .buy-button {
+    background-color: var.$accent-color;
+    color: var.$black;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+
+    &:hover {
+      background-color: darken(var.$accent-color, 10%);
+    }
+  }
+}

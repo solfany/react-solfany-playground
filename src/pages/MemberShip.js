@@ -1,6 +1,8 @@
 import React from "react";
-import { Routes, Route, Link } from "react-router-dom";
-import "../styles/Membership.css";
+import "../styles/pages/_membership.scss";
+import Container from "../components/ui/Container";
+import Section from "../components/ui/Section";
+import Title from "../components/ui/Title";
 
 const plans = [
     {
@@ -32,35 +34,32 @@ const plans = [
 
 const Membership = () => {
     return (
-        <div className="background">
-            <div className="overlay"></div>
-            <div className="content">
 
-                <div className="blur-container">
-                    <h1 className="title">플랜을 선택하세요!</h1>
-                    <p className="subtitle">Build your social presence for your entire team with STORI for free.</p>
-                    <div className="toggle-container">
-                        <button className="toggle-button">Monthly</button>
-                        <button className="toggle-button">Annually <span className="discount">20% OFF</span></button>
-                    </div>
-                    <div className="plans-container">
-                        {plans.map((plan, index) => (
-                            <div key={index} className={`plan-card ${plan.popular ? "popular" : ""}`}>
-                                <h2>{plan.name}</h2>
-                                <p className="price">{plan.price}</p>
-                                <ul>
-                                    {plan.features.map((feature, i) => (
-                                        <li key={i}>{feature}</li>
-                                    ))}
-                                </ul>
-                                <button className="plan-button">{plan.button}</button>
-                            </div>
-                        ))}
-                    </div>
-                    <p className="footer-note">Plan automatically renews until canceled. No commitment. Cancel anytime. Get a full refund within 7 days of payment.</p>
+        <Container>
+            <Section>
+                <Title>플랜을 선택하세요!</Title>
+                <p className="subtitle">Build your social presence for your entire team with STORI for free.</p>
+                <div className="toggle-container">
+                    <button className="toggle-button">Monthly</button>
+                    <button className="toggle-button">Annually <span className="discount">20% OFF</span></button>
                 </div>
-            </div>
-        </div>
+                <div className="plans-container">
+                    {plans.map((plan, index) => (
+                        <div key={index} className={`plan-card ${plan.popular ? "popular" : ""}`}>
+                            <h2>{plan.name}</h2>
+                            <p className="price">{plan.price}</p>
+                            <ul>
+                                {plan.features.map((feature, i) => (
+                                    <li key={i}>{feature}</li>
+                                ))}
+                            </ul>
+                            <button className="plan-button">{plan.button}</button>
+                        </div>
+                    ))}
+                </div>
+                <p className="footer-note">Plan automatically renews until canceled. No commitment. Cancel anytime. Get a full refund within 7 days of payment.</p>
+            </Section>
+        </Container>
     );
 };
 
