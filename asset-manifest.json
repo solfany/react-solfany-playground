@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.19c7b7b8.css",
-    "main.js": "/static/js/main.47047c20.js",
+    "main.css": "/static/css/main.3681b025.css",
+    "main.js": "/static/js/main.3c2291d3.js",
+    "static/media/온글잎_박다현체.ttf": "/static/media/온글잎_박다현체.c9d387ff3f723e917bba.ttf",
     "index.html": "/index.html",
-    "main.19c7b7b8.css.map": "/static/css/main.19c7b7b8.css.map",
-    "main.47047c20.js.map": "/static/js/main.47047c20.js.map"
+    "main.3681b025.css.map": "/static/css/main.3681b025.css.map",
+    "main.3c2291d3.js.map": "/static/js/main.3c2291d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.19c7b7b8.css",
-    "static/js/main.47047c20.js"
+    "static/css/main.3681b025.css",
+    "static/js/main.3c2291d3.js"
   ]
 }
