@@ -6,7 +6,6 @@
   padding: 20px;
   margin: 20px;
   position: relative;
-  display: flex;
   
   &.center {
     text-align: center;
@@ -23,5 +22,21 @@
 
   &.with-border {
     border-bottom: 1px solid #e5e7eb;
+  }
+}
+// _flex-section.scss
+.flex-section {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: nowrap ;
+  align-items: center;
+  justify-content: space-between;
+
+  &--center {
+    justify-content: center;
+  }
+
+  &--column {
+    flex-direction: column;
   }
 }

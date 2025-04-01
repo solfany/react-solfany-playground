@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/pages/_membership.scss";
 import Container from "../components/ui/Container";
-import Section from "../components/ui/Section";
+import Section from "../components/ui/section/Section";
 import Title from "../components/ui/Title";
 
 const plans = [

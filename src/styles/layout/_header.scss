@@ -21,58 +21,149 @@
   backdrop-filter: blur(10px);
   height: var.$header-height-md;
 
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    height: 100%;
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.4rem;
+      color: inherit;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+
   &.scrolled {
     background: rgba(0, 0, 0, 0.85);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    color: var.$gray-light;
-  }
-
-  .logo {
-    a {
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-decoration: none;
+    color: var.$white;
+    nav {
+      a, button {
+        color: var.$white;
+      }
     }
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2vw;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-
-    li {
-      display: inline;
+    div{
+      button{
+        color: var.$white;
+      }
     }
-
-    a {
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: color 0.3s ease-in-out;
-
-      &:hover {
-        color: var.$accent-color;
+    .header-actions {
+      button {
+        color: var.$white;
       }
     }
   }
 
-  .buy-button {
-    background-color: var.$accent-color;
-    color: var.$black;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-
-    &:hover {
-      background-color: darken(var.$accent-color, 10%);
+  .logo {
+    a {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      position: relative;
+      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #00d2ff;
+        bottom: 5px;
+        right: -10px;
+        animation: pulse 2s infinite;
+      }
     }
   }
+  
+  nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      li {
+        position: relative;
+        a, button {
+          font-size: 1rem;
+          position: relative;
+          padding: 0.5rem 0;
+          font-weight: 500;
+          text-decoration-line: none;
+          list-style: none;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            // background: linear-gradient(to right, #3a7bd5, #00d2ff);
+            transition: width 0.3s ease;
+          }
+          
+          &:hover::after {
+            width: 100%;
+          }
+        }
+        
+        .buy-button {
+          background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+          color: white;
+          border: none;
+          padding: 0.6rem 1.5rem;
+          border-radius: 30px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 210, 255, 0.2);
+          
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 210, 255, 0.3);
+          }
+          
+          &:active {
+            transform: translateY(1px);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// 애니메이션
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 210, 255, 0.7);
+  }
+  
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(0, 210, 255, 0);
+  }
+  
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 210, 255, 0);
+  }
+}
+
+// 네비게이션 표시기 - 현재 페이지 표시
+.active-nav-item::after {
+  width: 100% !important;
 }

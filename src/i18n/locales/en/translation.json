@@ -1,0 +1,26 @@
+{
+    "title": "Welcome",
+    "cardTitle": "Title",
+    "cardSubtitle": "Subtitle",
+    "cardContent": "This is the content.",
+    "cardButton": "Learn more",
+    "features": {
+      "title": "✨ Features",
+      "items": [
+        "Modular SCSS structure",
+        "Responsive layout",
+        "Clean component styling"
+      ]
+    },
+    "usage": {
+      "title": "📚 How to Use",
+      "tip1": "Edit the file at src/pages/Home.js.",
+      "tip2": "Edit the file at src/styles/pages/_home.scss."
+    },
+    "env": {
+      "title": "🛠️ Development Environment",
+      "tech1": "React, SCSS, Vite",
+      "tech2": "npm run dev"
+    }
+  }
+  

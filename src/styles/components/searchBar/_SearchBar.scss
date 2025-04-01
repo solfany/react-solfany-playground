@@ -1,0 +1,66 @@
+@use "../../abstracts/mixins" as mixins;
+@use "../../abstracts/variables" as var;
+
+// .search-bar {
+//   @include mixins.flex-center;
+//   gap: 12px;
+//   background: var.$white;
+//   border-radius: 0.2rem;
+//   padding: 10px 20px;
+//   max-width: 480px;
+//   width: 100%;
+
+//   .search-icon {
+//     color: var.$gray-dark;
+//     width: 20px;
+//     height: 20px;
+//     flex-shrink: 0;
+//   }
+
+//   input {
+//     flex: 1;
+//     border: none;
+//     outline: none;
+//     font-size: 0.95rem;
+//     background: transparent;
+//     color: var.$gray-dark;
+
+//     &::placeholder {
+//       color: var.$gray-dark;
+//     }
+//   }
+
+
+// 검색창 관련 스타일
+.search-wrapper {
+  position: relative;
+  
+  .search-input {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border-radius: var.$default-radius;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    width: 200px;
+    
+    &:focus {
+      width: 250px;
+      border-color: #3a7bd5;
+      box-shadow: 0 0 0 2px rgba(58, 123, 213, 0.2);
+      outline: none;
+    }
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    transition: color 0.3s ease;
+  }
+  
+  &:hover .search-icon {
+    color: #3a7bd5;
+  }
+}

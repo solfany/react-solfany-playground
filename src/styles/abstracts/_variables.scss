@@ -4,23 +4,59 @@
 // abstracts/_variables.scss
 
 // Color Palette
-$primary-color: #4f46e5;
-$secondary-color: #6366f1;
-$text-color: #1f2937;
-$gray-light: #f3f4f6;
-$gray-dark: #374151;
+// =============================
+// ⚪ Base Colors
+// =============================
 $white: #ffffff;
 $black: #000000;
-$red: #ef4444;
-$green: #10b981;
-$blue: #3b82f6;
-$yellow: #fbbf24;
-$purple: #a855f7;
-$orange: #f97316;
-$teal: #14b8a6;
-$indigo: #4f46e5;
-$pink: #ec4899;
-$accent-color: #ffcc00;
+
+// =============================
+// 🎨 Primary Colors
+// =============================
+$red:         #ef4444;
+$green:       #10b981;
+$blue:        #3b82f6;
+$yellow:      #fbbf24;
+$orange:      #f97316;
+$teal:        #14b8a6;
+$indigo:      #4f46e5;
+$purple:      #a855f7;
+$pink:        #ec4899;
+
+// =============================
+// 🩶 Grayscale
+// =============================
+$gray-light:  #f3f4f6;
+$gray:        #6b7280;
+$gray-dark:   #374151;
+
+// =============================
+// 🍬 Pastel / Soft Colors
+// =============================
+$pastel-purple: #e0bbf7;
+$pastel-pink:   #f9d7ec;
+$pastel-blue:   #dbeafe;
+$pastel-green:  #d1fae5;
+$pastel-yellow: #fef3c7;
+
+// =============================
+// ✨ Accent / Branding Colors
+// =============================
+$primary-color:    #4f46e5;
+$secondary-color:  #6366f1;
+$accent-color:     #ffcc00;
+$text-color:       #1f2937;
+
+
+
+// =============================
+//  radius
+// =============================
+$default-radius: 0.265rem; // 4px
+$small-radius: 0.125rem; // 2px
+$large-radius: 0.5rem; // 8px
+$circle-radius: 50%; // 50%
+$full-radius: 9999px; // 9999px
 
 
 // Typography
@@ -54,3 +90,9 @@ $header-height-md: 60px;
 $header-height-lg: 70px;
 $header-height-xl: 80px;
 $header-height-2xl: 90px;
+
+
+
+
+
+

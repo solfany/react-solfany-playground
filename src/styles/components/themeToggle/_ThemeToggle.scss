@@ -1,0 +1,15 @@
+@use "../../abstracts/mixins" as mixins;
+@use "../../abstracts/variables" as var;
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 0.4rem;
+  
+    &:hover {
+      color: var.$primary-color;
+    }
+  }
+  

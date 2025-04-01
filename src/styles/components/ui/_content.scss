@@ -1,13 +1,12 @@
 @use '../../abstracts/variables' as var;
 
 .content {
-  width: 100%;
-  max-width: 100%;
   padding: var.$spacing-md;
   margin: 0 auto;
   box-sizing: border-box;
+  margin: 1rem;
+  flex: 1;
 
-  // 예시: 정렬 옵션
   &.center {
     text-align: center;
   }

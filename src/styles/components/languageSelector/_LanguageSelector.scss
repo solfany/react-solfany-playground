@@ -1,0 +1,44 @@
+@use "../../abstracts/mixins" as mixins;
+@use "../../abstracts/variables" as var;
+
+.language-selector {
+  display: flex;
+  align-items: center;
+  height: 100%; // 부모(header)의 높이에 맞춤
+
+  .lang-icon {
+    color: var.$gray-dark;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .lang-options {
+    display: flex;
+    align-items: center; // 아이콘과 버튼 정렬
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 0.4rem;
+      font-size: 1.1rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      opacity: 0.6;
+      line-height: 1;
+
+      &.active {
+        opacity: 1;
+        font-weight: bold;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

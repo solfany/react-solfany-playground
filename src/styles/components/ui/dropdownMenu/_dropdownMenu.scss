@@ -1,0 +1,65 @@
+@use "../../../abstracts/mixins" as mixins;
+@use "../../../abstracts/variables" as var;
+
+.dropdown {
+  position: relative;
+  list-style-type: none;
+
+  .dropdown-toggle {
+    background: transparent;
+    border: none;
+    font-weight: 500;
+    color: var.$gray-dark;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+
+    .dropdown-arrow {
+      transition: transform 0.3s ease;
+    }
+
+    &.open .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var.$white;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 0.5rem;
+    min-width: 180px;
+    z-index: 100;
+    padding: 0.5rem 0;
+    cursor: pointer;
+
+    .dropdown-item {
+      display: block;
+      padding: 0.6rem 1rem;
+      color: var.$gray-dark;
+      text-decoration: none;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: var.$gray-light;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
