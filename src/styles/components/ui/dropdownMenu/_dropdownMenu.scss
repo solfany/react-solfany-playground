@@ -33,17 +33,19 @@
     border-radius: 0.5rem;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     margin-top: 0.5rem;
-    min-width: 180px;
+    min-width: 175px;
     z-index: 100;
     padding: 0.5rem 0;
     cursor: pointer;
+    font-size: small;
 
     .dropdown-item {
       display: block;
-      padding: 0.6rem 1rem;
+      padding: 0.5rem 1rem;
       color: var.$gray-dark;
-      text-decoration: none;
       transition: background 0.2s ease;
+      text-align: start;
+      inline-size: 100%;
 
       &:hover {
         background: var.$gray-light;
@@ -51,6 +53,7 @@
     }
   }
 }
+
 
 @keyframes fadeIn {
   from {

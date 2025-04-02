@@ -1,26 +1,11 @@
 {
-    "title": "환영합니다",
-    "cardTitle": "제목",
-    "cardSubtitle": "부제목",
-    "cardContent": "여기에 내용이 들어갑니다.",
-    "cardButton": "자세히 보기",
-    "features": {
-      "title": "✨ 특징",
-      "items": [
-        "SCSS 모듈화된 구조",
-        "반응형 기본 구성",
-        "깔끔한 컴포넌트 스타일링"
-      ]
-    },
-    "usage": {
-      "title": "📚 사용법",
-      "tip1": "src/pages/Home.js 파일을 수정해보세요.",
-      "tip2": "src/styles/pages/_home.scss 파일을 수정해보세요."
-    },
-    "env": {
-      "title": "🛠️ 개발 환경",
-      "tech1": "React, SCSS, Vite",
-      "tech2": "npm run dev"
-    }
+  "nav": {
+    "info": "정보",
+    "about": "소개",
+    "membership": "멤버십",
+    "services": "서비스 안내",
+    "service_ai": "AI 추천",
+    "service_template": "디자인 템플릿",
+    "service_project": "프로젝트 관리"
   }
-  
+}

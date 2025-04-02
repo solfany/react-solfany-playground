@@ -1,0 +1,20 @@
+@use "../../../abstracts/mixins" as mixins;
+@use "../../../abstracts/variables" as var;
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: none; 
+
+  svg {
+    width: 24px;
+    height: 24px;
+    color: var.$gray-dark;
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

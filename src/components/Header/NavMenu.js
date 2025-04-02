@@ -2,33 +2,36 @@
 import React from "react";
 import CustomLink from "../ui/customLink/CustomLink";
 import DropdownMenu from "../ui/dropdownMenu/DropdownMenu";
+import { useTranslation } from "react-i18next";
 
 const NavMenu = ({ isActive, isDropdownOpen, setIsDropdownOpen }) => {
+  const { t } = useTranslation();
+
   return (
     <ul className="nav-links">
       <li className="underline-link">
         <CustomLink to="/info" className={isActive("/info") ? "active-nav-item" : ""}>
-          Info
+          {t("nav.info")}
         </CustomLink>
       </li>
       <li className="underline-link">
         <CustomLink to="/about" className={isActive("/about") ? "active-nav-item" : ""}>
-          About Us
+          {t("nav.about")}
         </CustomLink>
       </li>
       <li className="underline-link">
         <CustomLink to="/membership" className={isActive("/membership") ? "active-nav-item" : ""}>
-          Membership
+          {t("nav.membership")}
         </CustomLink>
       </li>
       <DropdownMenu
-        name={"서비스 안내"}
+        name={t("nav.services")}
         isOpen={isDropdownOpen}
         toggle={() => setIsDropdownOpen((prev) => !prev)}
         menuItems={[
-          { label: "AI 추천", to: "/service-ai" },
-          { label: "디자인 템플릿", to: "/service-template" },
-          { label: "프로젝트 관리", to: "/service-project" },
+          { label: t("nav.service_ai"), to: "/service-ai" },
+          { label: t("nav.service_template"), to: "/service-template" },
+          { label: t("nav.service_project"), to: "/service-project" },
         ]}
       />
     </ul>

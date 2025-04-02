@@ -17,12 +17,19 @@ const DropdownMenu = ({ name, isOpen, toggle, menuItems = [] }) => (
     {isOpen && (
       <div className="dropdown-menu">
         {menuItems.map((item, index) => (
-          <CustomLink key={index} to={item.to} className="dropdown-item">
-            {item.label}
-          </CustomLink>
+          item.to ? (
+            <CustomLink key={index} to={item.to} className="dropdown-item">
+              {item.label}
+            </CustomLink>
+          ) : (
+            <button key={index} className="dropdown-item" onClick={item.action}>
+              {item.label}
+            </button>
+          )
         ))}
       </div>
     )}
+
   </li>
 );
 

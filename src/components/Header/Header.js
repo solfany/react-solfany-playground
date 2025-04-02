@@ -6,6 +6,7 @@ import DropdownMenu from "../ui/dropdownMenu/DropdownMenu";
 import { Globe } from "lucide-react";
 import { getLanguageItems } from "../ui/languageSelector/LanguageSelector";
 import { useLanguage } from "../../contexts/LanguageContext";
+import HamburgerMenu from "../ui/hamburgerMenu/HamburgerMenu.js";
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,11 +51,19 @@ const Header = () => {
     return () => window.removeEventListener("scroll", revealOnScroll);
   }, []);
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
+
+  useEffect(() => {
+    const closeOnRouteChange = () => setIsMobileMenuOpen(false);
+    window.addEventListener("hashchange", closeOnRouteChange);
+    return () => window.removeEventListener("hashchange", closeOnRouteChange);
+  }, []);
+
   return (
     <header className={`header ${scrolled ? "scrolled" : ""}`}>
       <Logo />
       <nav>
-        <SearchArea />
         <NavMenu
           isActive={isActive}
           isDropdownOpen={isDropdownOpen}
@@ -62,7 +71,9 @@ const Header = () => {
           navigate={navigate}
         />
       </nav>
-      <div className="header-actions">
+      <div className="miscellaneous-menu">
+        <SearchArea />
+
         <DropdownMenu name={<Globe size={16} />}
           isOpen={isLangOpen}
           toggle={toggleLang}
@@ -70,7 +81,19 @@ const Header = () => {
         />
         <ThemeToggle />
         <NotificationBell navigate={navigate} />
+        <HamburgerMenu toggle={toggleMobileMenu} />
       </div>
+
+      {isMobileMenuOpen && (
+        <div className="mobile-menu">
+          <NavMenu
+            isActive={isActive}
+            isDropdownOpen={isDropdownOpen}
+            setIsDropdownOpen={setIsDropdownOpen}
+            navigate={navigate}
+          />
+        </div>
+      )}
     </header>
 
   );
