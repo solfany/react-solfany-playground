@@ -32,24 +32,26 @@ const Header = () => {
 
   const isActive = (path) => location.pathname === path;
 
+  const [scrollDirection, setScrollDirection] = useState("up");
+  const [lastScrollY, setLastScrollY] = useState(0);
+  
   useEffect(() => {
-    const revealElements = document.querySelectorAll(".reveal-on-scroll");
-
-    const revealOnScroll = () => {
-      revealElements.forEach((el) => {
-        const elementTop = el.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if (elementTop < windowHeight - 100) {
-          el.classList.add("revealed");
-        }
-      });
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+  
+      if (currentScrollY > lastScrollY && currentScrollY > 60) {
+        setScrollDirection("down");
+      } else {
+        setScrollDirection("up");
+      }
+  
+      setLastScrollY(currentScrollY);
     };
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-
-    return () => window.removeEventListener("scroll", revealOnScroll);
-  }, []);
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+  
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
@@ -61,8 +63,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header className={`header ${scrolled ? "scrolled" : ""}`}>
-      <Logo />
+<header className={`header ${scrolled ? "scrolled" : ""} ${scrollDirection === "down" ? "hide" : ""}`}>
+<Logo />
       <nav>
         <NavMenu
           isActive={isActive}

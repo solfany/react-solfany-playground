@@ -55,6 +55,7 @@ button {
    이미지 기본 스타일
 ================================ */
 img {
-  max-width: 100%;
-  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
 }

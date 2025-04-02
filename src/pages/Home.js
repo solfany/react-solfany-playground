@@ -15,24 +15,34 @@ const Home = () => {
 
   return (
     <>
-      <Section>
-      <Subtitle>sub title</Subtitle>
-      <Title>{t("title")}</Title>
       <FlexSection>
-        <Content>
-          <Text>1번째 content</Text>
-        </Content>
-        <Content>
-          <Card
-            title="제목"
-            subtitle="부제목"
-            content="여기에 내용이 들어갑니다."
-            imageUrl="/images/example.jpg"
-            footer={<button className="text-blue-500">자세히 보기</button>}
-          />
-        </Content>
-        </FlexSection>
-      </Section>
+
+        <Card
+          title="제목"
+          subtitle="부제목"
+          content="여기에 내용이 들어갑니다."
+          imageUrl="/images/test.jpg"
+          footer={<button className="text-blue-500">자세히 보기</button>}
+        />
+      </FlexSection>
+      <Title level={3}>📚 사용법</Title>
+
+      <FlexSection>
+        <Card
+          title="제목"
+          subtitle="부제목"
+          content="여기에 내용이 들어갑니다."
+          imageUrl="/images/test.jpg"
+          footer={<button className="text-blue-500">자세히 보기</button>}
+        />
+        <Card
+          title="제목"
+          subtitle="부제목"
+          content="여기에 내용이 들어갑니다."
+          imageUrl="/images/test.jpg"
+          footer={<button className="text-blue-500">자세히 보기</button>}
+        />
+      </FlexSection>
 
       <Section>
         <Title level={3}>✨ 특징</Title>

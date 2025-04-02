@@ -1,21 +1,19 @@
 import React from 'react';
 import '../../../styles/components/ui/card/_card.scss';
-import Title from "../Title";
-import Subtitle from "../Subtitle";
-import Img from "../img/Img";
 
 const Card = ({ title, subtitle, content, imageUrl, className = '' }) => {
   return (
     <div className={`card ${className}`}>
       {imageUrl && (
-        <Img src={imageUrl} alt={title} className="card__image" />
+        <div
+          className="card__image"
+          style={{ backgroundImage: `url(${imageUrl})` }}
+        />
       )}
-
-      {title && <Title>{title}</Title>}
-      {subtitle && <Subtitle>{subtitle}</Subtitle>}
-
       <div className="card__body">
-        {content}
+        {subtitle && <div className="card__subtitle">{subtitle}</div>}
+        {title && <h3 className="card__title">{title}</h3>}
+        <div className="card__content">{content}</div>
       </div>
     </div>
   );
