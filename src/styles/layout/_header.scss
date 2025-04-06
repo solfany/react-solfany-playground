@@ -100,38 +100,6 @@
         height: 2rem; // 아치 효과를 위한 높이 확보
         width: 100%; // 너비 확보
       }
-  
-      .arc-char {
-        display: inline-block;
-        transition: all 0.4s ease;
-      }
-      
-      // 기본 상태
-      .logo-sub .arc-char {
-        transform: translateY(0) rotate(0);
-      }
-  
-      // 호버 시 아치형 곡선 효과 - position: absolute 사용하지 않음
-      &:hover .logo-sub {
-        .arc-char {
-          display: inline-block;
-          
-          // 문자별 위치와 회전 계산
-          &:nth-child(1)  { transform: translateY(-2px)  rotate(-15deg); }
-          &:nth-child(2)  { transform: translateY(-4px)  rotate(-12deg); }
-          &:nth-child(3)  { transform: translateY(-6px)  rotate(-9deg); }
-          &:nth-child(4)  { transform: translateY(-8px)  rotate(-6deg); }
-          &:nth-child(5)  { transform: translateY(-10px) rotate(-3deg); }
-          &:nth-child(6)  { transform: translateY(-12px) rotate(-1deg); }
-          &:nth-child(7)  { transform: translateY(-13px) rotate(0deg); } // 👈 중심
-          &:nth-child(8)  { transform: translateY(-12px) rotate(1deg); }
-          &:nth-child(9)  { transform: translateY(-10px) rotate(3deg); }
-          &:nth-child(10) { transform: translateY(-8px)  rotate(6deg); }
-          &:nth-child(11) { transform: translateY(-6px)  rotate(9deg); }
-          &:nth-child(12) { transform: translateY(-4px)  rotate(12deg); }
-          &:nth-child(13) { transform: translateY(-2px)  rotate(15deg); }
-        }
-      }
     }
   }
 
