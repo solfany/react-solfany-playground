@@ -1,4 +1,3 @@
-// Card.scss
 @use "../../../abstracts/mixins" as mixins;
 @use "../../../abstracts/variables" as var;
 .card {
@@ -17,42 +16,71 @@
     height: 100%;
     background-size: cover;
     background-position: center;
-    // filter: brightness(0.6);
     z-index: 1;
     transition: transform 0.3s ease;
   }
 
   .card__body {
-    position: relative;
+    position: absolute;
     z-index: 2;
     color: #fff;
-    padding: 1.5rem;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
+  }
+
+  .card__center-title {
+    width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none; // 타이틀이 마우스 이벤트를 방해하지 않도록 함
   }
 
   .card__title {
-    font-size: 1.3rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    pointer-events: none; // 마우스오버 시 영향 받지 않도록
+  }
+
+  .card__bottom-content {
+    padding: 1.5rem;
+    align-self: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    pointer-events: none; // 마우스오버 시 영향 받지 않도록
   }
 
   .card__subtitle {
     font-size: 1rem;
     opacity: 0.8;
     margin-bottom: 0.3rem;
+    text-align: left;
   }
 
   .card__content {
-    font-size: 0.9rem;
+    font-size: 1.8rem;
     line-height: 1.5;
-    padding: 1rem;
- 
+    text-align: left;
+    font-weight: 700;
   }
 
   &:hover .card__image {
     transform: scale(1.05);
+  }
+
+  // 중요: 마우스오버 시 텍스트는 확대되지 않도록 함
+  &:hover .card__title,
+  &:hover .card__subtitle,
+  &:hover .card__content {
+    transform: none;
   }
 }

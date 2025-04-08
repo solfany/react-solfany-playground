@@ -2,8 +2,8 @@
 import React from "react";
 import "../../../styles/components/ui/_section.scss";
 
-const FlexSection = ({ children, className = "" }) => {
-    return <section className={`flex-section ${className}`}>{children}</section>;
+const FlexSection = ({ children, className = "", style }) => {
+    return <section className={`flex-section ${className}`} style={style}>{children}</section>;
 };
 
 export default FlexSection;

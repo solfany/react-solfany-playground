@@ -1,0 +1,105 @@
+@use '../../../styles/abstracts/mixins' as *;
+@use '../../../styles/abstracts/variables' as *;
+
+.products-section {
+  padding: 64px 24px;
+  background-color: #f8f8f8;
+  margin: 0 auto;
+  border-radius: 2rem;
+}
+
+.products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+
+  &__left {
+    max-width: 60%;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    line-height: 1.1;
+  }
+
+  &__description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.viewmore-button {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 24px;
+  padding: 10px 24px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &__arrow {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background-color: #333;
+    color: white;
+
+    .viewmore-button__arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  &__item {
+    min-height: 350px;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// 반응형 디자인을 위한 추가 스타일
+@media (max-width: 768px) {
+  .products-header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__left {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
+}

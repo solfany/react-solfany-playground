@@ -1,0 +1,82 @@
+.sub-header {
+    width: 100%;
+    margin-top: 3rem;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+    
+    .sub-header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 0;
+    }
+    
+    .category-menu {
+      width: 100%;
+      overflow-x: auto;
+      
+      // 스크롤바 숨기기
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    
+    .category-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 1rem;
+      min-width: max-content;
+      justify-content: center;
+    }
+    
+    .category-item {
+      flex: 0 0 auto;
+    }
+    
+    .category-button {
+      display: block;
+      padding: 0.75rem 1.5rem;
+      border: 2px solid #dee2e6;
+      border-radius: 6px;
+      background-color: white;
+      color: #495057;
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 100px;
+      
+      &:hover {
+        background-color: #f1f3f5;
+        border-color: #adb5bd;
+      }
+      
+      &.active {
+        background-color: #4263eb;
+        color: white;
+        border-color: #4263eb;
+        
+        &:hover {
+          background-color: #3b5bdb;
+          border-color: #3b5bdb;
+        }
+      }
+    }
+    
+    // 반응형 디자인
+    @media (max-width: 768px) {
+      .sub-header-container {
+        padding: 0.75rem 1rem;
+      }
+      
+      .category-button {
+        padding: 0.5rem 1rem;
+        min-width: 80px;
+        font-size: 0.875rem;
+      }
+    }
+  }

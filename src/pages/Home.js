@@ -3,10 +3,8 @@ import "../styles/pages/_home.scss";
 import Section from "../components/ui/section/Section";
 import FlexSection from "../components/ui/section/FlexSection";
 import Title from "../components/ui/Title";
-import Subtitle from "../components/ui/Subtitle";
 import Text from "../components/ui/Text";
 import List from "../components/ui/List";
-import Content from "../components/ui/Content";
 import Card from "../components/ui/card/Card";
 import { useTranslation } from "react-i18next";
 
@@ -16,7 +14,6 @@ const Home = () => {
   return (
     <>
       <FlexSection>
-
         <Card
           title="제목"
           subtitle="부제목"

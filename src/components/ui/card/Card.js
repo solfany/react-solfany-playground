@@ -11,9 +11,13 @@ const Card = ({ title, subtitle, content, imageUrl, className = '' }) => {
         />
       )}
       <div className="card__body">
-        {subtitle && <div className="card__subtitle">{subtitle}</div>}
-        {title && <h3 className="card__title">{title}</h3>}
-        <div className="card__content">{content}</div>
+        <div className="card__center-title">
+          {title && <h3 className="card__title">{title}</h3>}
+        </div>
+        <div className="card__bottom-content">
+          {subtitle && <div className="card__subtitle">{subtitle}</div>}
+          {content && <div className="card__content">{content}</div>}
+        </div>
       </div>
     </div>
   );

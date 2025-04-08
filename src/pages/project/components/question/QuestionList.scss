@@ -1,0 +1,56 @@
+.question-list {
+    .question-item {
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 24px;
+      background-color: #fff;
+    }
+  
+    .question-title {
+      background-color: #f1f3f5;
+      padding: 10px 14px;
+      font-weight: bold;
+      border-bottom: 1px solid #ccc;
+      border-radius: 6px 6px 0 0;
+    }
+  
+    .choice-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 12px;
+  
+      .choice-item {
+        display: flex;
+        align-items: center;
+        padding: 10px 14px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background 0.2s;
+  
+        .choice-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 38px;
+          margin-right: 12px;
+          position: relative;
+          font-size: 16px;
+          font-weight: 500;
+  
+          .checkmark {
+            position: absolute;
+            top: -4px;
+            left: 13px;
+            color: crimson;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+  
+        .choice-text {
+          flex: 1;
+        }
+      }
+    }
+  }
+  

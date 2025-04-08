@@ -1,0 +1,25 @@
+// QuestionPage.scss
+.question-page {
+  position: relative;
+  min-width: 1250px;
+  place-self: anchor-center;
+  }
+  
+  .question-main {
+    flex: 3;
+  }
+  .question-main-title{
+    font-size: 32px;
+    margin-bottom: 20px;
+    place-self: center;
+  }
+  .question-1{
+    flex:1
+  }
+  .answer-sheet {
+    flex: 1;
+    background: #f5f5f5;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  

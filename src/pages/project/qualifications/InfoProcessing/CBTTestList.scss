@@ -1,0 +1,107 @@
+.cbt-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  place-self: center;
+}
+
+.cbt-test-list {
+  justify-self: center;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  p {
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #666;
+  }
+
+  .test-item {
+    margin-bottom: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 900px;
+    min-width: 700px;
+
+    .test-title {
+      background-color: #f1f1f1;
+      width: 100%;
+      padding: 14px 18px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+
+      &.open {
+        background-color: #2b2b2b;
+        color: white;
+      }
+
+      .score-badge {
+        background: #ddd;
+        color: #333;
+        border-radius: 12px;
+        padding: 2px 10px;
+        font-size: 12px;
+        margin-left: 8px;
+      }
+
+      .toggle {
+        font-size: 20px;
+        font-weight: bold;
+        margin-left: auto;
+      }
+    }
+
+    .test-subjects {
+      background: #fff;
+      padding: 12px 16px;
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+        li {
+          background-color: #f8f8f8;
+          padding: 8px 12px;
+          border-radius: 6px;
+          cursor: pointer;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: background-color 0.2s;
+
+          &:hover {
+            background-color: #e2e2e2;
+          }
+
+          .score {
+            display: inline-block;
+            background-color: #008fcf;
+            color: white;
+            border-radius: 12px;
+            padding: 2px 10px;
+            font-size: 12px;
+
+            .score-now {
+              font-weight: bold;
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

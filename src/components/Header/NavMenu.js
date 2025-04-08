@@ -23,21 +23,13 @@ const NavMenu = ({ isActive, isDropdownOpen, setIsDropdownOpen }) => {
           블로그
         </CustomLink>
       </li>
-
-      {/* ✅ 개발 리소스 드롭다운 */}
-      <DropdownMenu
-        name="개발 리소스"
-        isOpen={isDropdownOpen}
-        toggle={() => setIsDropdownOpen(prev => !prev)}
-        menuItems={[
-          { label: "JSON 변환기", to: "/tool/json" },
-          { label: "티스토리 변환기", to: "/tool/tistory" },
-          { label: "기타 유틸", to: "/tool/others" },
-        ]}
-      />
-
       <li className="underline-link">
-        <CustomLink to="/projects" className={isActive("/projects") ? "active-nav-item" : ""}>
+        <CustomLink to="/resource" className={isActive("/blog") ? "active-nav-item" : ""}>
+          개발 리소스
+        </CustomLink>
+      </li>
+      <li className="underline-link">
+        <CustomLink to="/project" className={isActive("/project") ? "active-nav-item" : ""}>
           사이드 프로젝트
         </CustomLink>
       </li>
