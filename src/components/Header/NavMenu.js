@@ -1,11 +1,18 @@
 import React from "react";
 import CustomLink from "../ui/customLink/CustomLink";
-import DropdownMenu from "../ui/dropdownMenu/DropdownMenu";
 import { useTranslation } from "react-i18next";
-
+import DropdownMenu from "../ui/dropdown/DropdownMenu";
+import { useLanguage } from "../../contexts/LanguageContext";
+import { getLanguageItems } from "../ui/languageSelector/LanguageSelector";
+import { useState } from "react";
 const NavMenu = ({ isActive, isDropdownOpen, setIsDropdownOpen }) => {
   const { t } = useTranslation();
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const { setLanguage } = useLanguage();
 
+  const toggleLang = () => setIsLangOpen((prev) => !prev);
+  const closeLang = () => setIsLangOpen(false);
+  const languageItems = getLanguageItems(setLanguage, closeLang);
   return (
     <ul className="nav-links">
       <li className="underline-link">
@@ -32,6 +39,21 @@ const NavMenu = ({ isActive, isDropdownOpen, setIsDropdownOpen }) => {
         <CustomLink to="/project" className={isActive("/project") ? "active-nav-item" : ""}>
           사이드 프로젝트
         </CustomLink>
+      </li>
+      <li className="underline-link">
+        <CustomLink to="/premium" className={isActive("/premium") ? "active-nav-item" : ""}>
+          유료 서비스
+        </CustomLink>
+      </li>
+      <li className="underline-link">
+        <DropdownMenu
+          type="nav"
+          name={"테스트"}
+          isOpen={isLangOpen}
+          toggle={toggleLang}
+          menuItems={languageItems}
+        />
+
       </li>
       <li className="underline-link">
         <CustomLink to="/premium" className={isActive("/premium") ? "active-nav-item" : ""}>

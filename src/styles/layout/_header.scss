@@ -24,7 +24,9 @@
     align-items: center;
     gap: 1rem;
     height: 100%;
-
+      .theme-toggle{
+        margin-top: 4px;
+      }
     button {
       align-items: center;
       justify-content: center;
@@ -33,9 +35,9 @@
       border: none;
       color: inherit;
       cursor: pointer;
+      gap: var.$spacing-gap-xxxs;
     }
   }
-  .header-top-row,
   .mobile-controls {
     display: none;
   }
@@ -174,6 +176,19 @@
     padding: 0.8rem 1.2rem;
     height: auto;
 
+    .mobile-controls {
+
+      button{
+        margin: 0;
+        padding: 4px;
+        width: 40px;
+      }
+    }
+
+    .dropdown .dropdown-toggle {
+      gap: 0.1rem;
+    }
+
     .header-top-row {
       display: flex;
       justify-content: space-between;
@@ -199,6 +214,7 @@
       display: none; // 모바일에서는 숨김
     }
   }
+
   .mobile-menu {
     position: absolute;
     top: 100%;
@@ -214,7 +230,7 @@
       display: flex;
       flex-direction: column;
       gap: var.$spacing-gap-xxs;
-      
+
       li {
         width: 100%;
 
@@ -230,6 +246,34 @@
         }
       }
     }
+
+    // 버튼 햄버거 메뉴 
+    // .nav-links-buttons {
+    //   flex-direction: column;
+    //   gap: var.$spacing-gap-xxs;
+    //   display: grid;
+    //   grid-template-columns: repeat(4, 1fr);
+    //   li {
+    //     width: 100%;
+
+    //     a,
+    //     button {
+    //       display: block;
+    //       width: 100%;
+    //       font-size: 0.75rem;
+    //       font-weight: 500;
+    //       color: #222;
+    //       border: 1px solid;
+    //       border-color: #dadee3;
+    //       border-radius: 0.4rem;
+    //       max-width: 85px;
+    //       padding: 6px;
+    //       align-items: center;
+    //       text-align: center;
+    //       white-space: nowrap;
+    //     }
+    //   }
+    // }
   }
 }
 
