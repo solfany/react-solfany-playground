@@ -45,21 +45,6 @@ const NavMenu = ({ isActive, isDropdownOpen, setIsDropdownOpen }) => {
           유료 서비스
         </CustomLink>
       </li>
-      <li className="underline-link">
-        <DropdownMenu
-          type="nav"
-          name={"테스트"}
-          isOpen={isLangOpen}
-          toggle={toggleLang}
-          menuItems={languageItems}
-        />
-
-      </li>
-      <li className="underline-link">
-        <CustomLink to="/premium" className={isActive("/premium") ? "active-nav-item" : ""}>
-          유료 서비스
-        </CustomLink>
-      </li>
     </ul>
   );
 };

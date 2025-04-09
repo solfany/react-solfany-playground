@@ -7,10 +7,11 @@ const ProductGrid = ({ products }) => {
     <section className="products-section">
       <div className="products-header">
         <div className="products-header__left">
-          <p className="products-header__subtitle">Global leaders piping material</p>
-          <h2 className="products-header__title">Products</h2>
+          <p className="products-header__subtitle">Explore My Creations</p>
+          <h2 className="products-header__title">Side Projects</h2>
           <p className="products-header__description">
-            한데이스트리얼은 엔지니어링 서비스, 최고 공급 및 유통의 프로젝션 패키지 고품질의 산업 제품 및 장비를 제공합니다.
+            다양한 아이디어와 기술을 바탕으로 직접 만들어본 프로젝트들을 소개합니다.
+            하단에서 자유롭게 둘러보고 직접 사용해보세요!
           </p>
         </div>
         <div className="products-header__right">

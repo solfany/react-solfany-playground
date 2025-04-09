@@ -1,7 +1,7 @@
 import react from "react";
 import SubHeader from "../components/Header/SubHeader";
 import FlexSection from "../components/ui/section/FlexSection";
-import Card from "../components/ui/card/Card";
+import ProjectCard from "../components/ui/card/ProjectCard";
 import ProductGrid from "../components/ui/grid/ProductGrid";
 const Project = () => {
     const products = [
@@ -11,49 +11,52 @@ const Project = () => {
             subDescription: '상하수도용 플렌지',
             // 흰색 배경에 앞에 이미지만 있는 경우
             backgroundImageUrl: null,
-            foregroundImageUrl: '/images/test.jpg',
+            foregroundImageUrl: '/images/test2-removebg-preview.png',
             pageUrl: '/project/qualifications'
         },
         {
-            title: 'Fittings',
-            description: 'Tee, Reducer, Elbow, Cap, Lateral 등',
-            subDescription: '모든 이음관',
+            title: '개발예정',
+            description: '개발중입니다. 기대해주세요!',
+            subDescription: '코파일럿 좋군요 하하',
             // 배경 이미지만 있는 경우
             backgroundImageUrl: '/images/fittings-bg.jpg',
-            foregroundImageUrl: null,
+            foregroundImageUrl: '/images/test2-removebg-preview.png',
             pageUrl: '/products/qualifications'
         },
         {
-            title: 'Piping Materials',
-            description: '주철관, PE관, 코팅강관, 스텐레스 등',
-            subDescription: '유통가능 모든 종류 취급',
-            // 배경 이미지와 앞에 이미지 모두 있는 경우
-            backgroundImageUrl: '/images/piping-bg.jpg',
-            foregroundImageUrl: '/images/piping-front.jpg',
+            title: '개발예정',
+            description: '개발중입니다. 기대해주세요!',
+            subDescription: '코파일럿 좋군요 하하',
+            // 배경 이미지만 있는 경우
+            backgroundImageUrl: '/images/fittings-bg.jpg',
+            foregroundImageUrl: '/images/test2-removebg-preview.png',
             pageUrl: '/products/qualifications'
         },
         {
-            title: 'Valves',
-            description: '다양한 종류의 밸브',
-            subDescription: '산업용 밸브 시스템',
-            // 이미지가 둘 다 없는 경우 (흰색 배경만)
-            backgroundImageUrl: null,
-            foregroundImageUrl: null,
+            title: '개발예정',
+            description: '개발중입니다. 기대해주세요!',
+            subDescription: '코파일럿 좋군요 하하',
+            // 배경 이미지만 있는 경우
+            backgroundImageUrl: '/images/fittings-bg.jpg',
+            foregroundImageUrl: '/images/test2-removebg-preview.png',
             pageUrl: '/products/qualifications'
-        }
+        },
         // 추가 제품이 있으면 자동으로 다음 줄로 이동합니다
     ];
     return (
         <div>
-            <FlexSection>
-                <Card
-                    title="SIDE PROJECT"
-                    subtitle="부제목"
-                    content="여기에 내용이 들어갑니다."
-                    imageUrl="/images/test.jpg"
-                    footer={<button className="text-blue-500">자세히 보기</button>}
-                />
-            </FlexSection>
+<FlexSection>
+  <ProjectCard
+    title="SIDE PROJECT"
+    subtitle="부제목"
+    content="여기에 내용이 들어갑니다."
+    imageUrl="/images/test.jpg"
+    showSearch={true} // 이거 추가 시 검색창/버튼이 보임
+    onSearch={(keyword) => console.log("검색어:", keyword)}
+    footer={<button className="text-blue-500">자세히 보기</button>}
+  />
+</FlexSection>
+
 
             <ProductGrid products={products} />
 
