@@ -20,7 +20,7 @@ const ThemeToggle = () => {
 
   return (
     <button className="theme-toggle" onClick={() => setDark((prev) => !prev)} title="테마 전환">
-      {dark ? <Sun size={18} /> : <Moon size={18} />}
+      {dark ? <Sun size={21} /> : <Moon size={21} />}
     </button>
   );
 };
