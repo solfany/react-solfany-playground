@@ -39,9 +39,7 @@ const Home = () => {
           imageUrl="/images/test.jpg"
           footer={<button className="text-blue-500">자세히 보기</button>}
         />
-        
       </FlexSection>
-
       <Section>
         <Title level={3}>✨ 특징</Title>
         <List

@@ -10,6 +10,7 @@ import HamburgerMenu from "../ui/hamburgerMenu/HamburgerMenu.js";
 import MobileDrawer from "./MobileDrawer";
 import MobileControls from "./MobileControls";
 import UseHeaderScrollEffect from "./UseHeaderScrollEffect";
+import VisitorCounter from "./VisitorCounter";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -77,6 +78,7 @@ const Header = () => {
       </nav>
 
       <div className="miscellaneous-menu">
+        <VisitorCounter type="total" />
         <SearchArea />
         <DropdownMenu
           name={<Globe size={20} />}

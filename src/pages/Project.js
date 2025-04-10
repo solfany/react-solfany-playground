@@ -45,17 +45,17 @@ const Project = () => {
     ];
     return (
         <div>
-<FlexSection>
-  <ProjectCard
-    title="SIDE PROJECT"
-    subtitle="부제목"
-    content="여기에 내용이 들어갑니다."
-    imageUrl="/images/test.jpg"
-    showSearch={true} // 이거 추가 시 검색창/버튼이 보임
-    onSearch={(keyword) => console.log("검색어:", keyword)}
-    footer={<button className="text-blue-500">자세히 보기</button>}
-  />
-</FlexSection>
+            <FlexSection>
+                <ProjectCard
+                    title="SIDE PROJECT"
+                    subtitle="부제목"
+                    content="여기에 내용이 들어갑니다."
+                    imageUrl="/images/test.jpg"
+                    showSearch={true} // 이거 추가 시 검색창/버튼이 보임
+                    onSearch={(keyword) => console.log("검색어:", keyword)}
+                    footer={<button className="text-blue-500">자세히 보기</button>}
+                />
+            </FlexSection>
 
 
             <ProductGrid products={products} />
